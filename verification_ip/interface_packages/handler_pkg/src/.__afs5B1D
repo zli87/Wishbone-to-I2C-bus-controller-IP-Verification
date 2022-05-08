@@ -1,0 +1,46 @@
+class my_blocking_put_imp#(T) extends my_port_component_base#(.T(T));
+
+typedef my_port_component_base#(.T(T)) my_port;
+typedef ncsu_component#(.T(T)) parent_type;
+
+my_port port;
+parent_type my_parent;
+
+function new (string name, parent_type parent);
+    super.new(name,parent);
+    my_parent = parent;
+endfunction
+
+function void connect( input my_port PORT );
+    this.port = PORT;
+endfunction
+
+virtual function bit is_port();
+    return 0;
+endfunction
+
+virtual function bit is_export();
+    return 0;
+endfunction
+
+virtual function bit is_imp();
+    return 1;
+endfunction
+
+virtual function void nb_put(input T trans);
+    my_parent.np_put(trans);
+endfunction
+
+virtual task bl_get(output T trans);
+endtask
+
+virtual function void nb_get(output T trans);
+endfunction
+
+virtual task bl_transport(input T input_trans, output T output_trans);
+endtask
+
+virtual function void nb_transport(input T input_trans, output T output_trans);
+endfunction
+
+endclass

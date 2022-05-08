@@ -1,0 +1,29 @@
+//------------------------------------------------------------------
+
+//------------------------------------------------------------------
+
+virtual class my_port_component_base#(T) extends ncsu_component#(.T(T));
+
+function new (string name, ncsu_component#(.T(T)) parent);
+    super.new(name,parent);
+endfunction
+
+// pure virtual function void get_connected_to(ref uvm_port_list list);
+
+pure virtual function bit is_port();
+
+pure virtual function bit is_export();
+
+pure virtual function bit is_imp();
+
+pure virtual function void nb_put(input T trans);
+
+pure virtual task bl_get(output T trans);
+
+pure virtual function void nb_get(output T trans);
+
+pure virtual task bl_transport(input T input_trans, output T output_trans);
+
+pure virtual function void nb_transport(input T input_trans, output T output_trans);
+
+endclass

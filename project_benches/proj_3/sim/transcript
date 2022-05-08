@@ -1,0 +1,29 @@
+# //  Questa Sim
+# //  Version 2020.4_1 linux Nov  6 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do load_ucdbs_and_merge_with_test_plan.do
+# Format 'Excel' read from parameter file.
+# 40 testplan section(s) added.
+# Database './i2cmb_test_plan.ucdb' written.
+# Merging file ./i2cmb_generator_register_test.3074353043.ucdb
+# Merging file ./i2cmb_generator_fsm_functionality_test.1421797240.ucdb
+# Merging file ./i2cmb_generator_control_functionality_test.4148094673.ucdb
+# Merging file ./i2cmb_test_plan.ucdb
+# Writing merged result to i2cmb_test_plan.ucdb
+# 
+# Applying tag commands ...
+# All tags are applied successfully.
+coverage open /afs/unity.ncsu.edu/users/z/zli87/ece-745-Projects/ece745_projects/project_benches/proj_3/sim/i2cmb_test_plan.ucdb
+# coverage read -dataset i2cmb_test_plan /afs/unity.ncsu.edu/users/z/zli87/ece-745-Projects/ece745_projects/project_benches/proj_3/sim/i2cmb_test_plan.ucdb
+# /afs/unity.ncsu.edu/users/z/zli87/ece-745-Projects/ece745_projects/project_benches/proj_3/sim/i2cmb_test_plan.ucdb opened as coverage dataset "i2cmb_test_plan"
