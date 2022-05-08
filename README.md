@@ -53,39 +53,39 @@ For detail explanation of iicmb controller's feature and control command, please
 
 # 3. Verification methods
 
-- functional coverage
-    1\. wisbone covergroup:
-        1. auto defined bins: 4 types of wb_address, 2 types of wishbone operation(r/w) 
-        2. cross bins: wb_addrXop
-    2\. CSR covergroup:
-        1. user-defined state bins:  5 types of csr feature bits
-    3\. DPR covergroup:
-        1. user-defined state bins: 3 groups of dpr register value
-    4\. CMDR covergroup:
-        1. user-defined state bins: 4 types of cmdr feature bits, 6 types of commands
-        2. transition bins: 25 types of command transition
+3.1. functional coverage
+    3.1.1. wisbone covergroup:
+        - auto defined bins: 4 types of wb_address, 2 types of wishbone operation(r/w) 
+        - cross bins: wb_addrXop
+    3.1.2. CSR covergroup:
+        - user-defined state bins:  5 types of csr feature bits
+    3.1.3. DPR covergroup:
+        - user-defined state bins: 3 groups of dpr register value
+    3.1.4. CMDR covergroup:
+        - user-defined state bins: 4 types of cmdr feature bits, 6 types of commands
+        - transition bins: 25 types of command transition
 
-    5\. i2c covergroup
-        1. auto defined bins: 2 types of i2c operations
-        2. user-defined state bins: 4 groups of i2c address, 4 groups of i2c data value, 3 groups of i2c transfer byte numbers(transSize)
-        3. cross bins: i2c_addrXop, i2c_addrXtransSize, i2c_opXtransSize
+    3.1.5. i2c covergroup
+        - auto defined bins: 2 types of i2c operations
+        - user-defined state bins: 4 groups of i2c address, 4 groups of i2c data value, 3 groups of i2c transfer byte numbers(transSize)
+        - cross bins: i2c_addrXop, i2c_addrXtransSize, i2c_opXtransSize
 
-- SystemVerilog assertion
-    1\. irq signal should never be asserted if interrupt is disabled.
-    2\. cmdr reserved bit should never be asserted.
-    3\. dut should never execute undefined command.
-    4\. byte finite state machine state should never be undefined state.
-    5\. bit finite state machine state should never be undefined state.
+3.2. SystemVerilog assertion
+    3.2.1. irq signal should never be asserted if interrupt is disabled.
+    3.2.2. cmdr reserved bit should never be asserted.
+    3.2.3. dut should never execute undefined command.
+    3.2.4. byte finite state machine state should never be undefined state.
+    3.2.5. bit finite state machine state should never be undefined state.
 
-- code coverage
-    1\. make sure each statement and condition in finite state machine has executed.
+3.3. code coverage
+    3.3.1. make sure each statement and condition in finite state machine has executed.
 
-- direct test case
-    1\. register reset test: ensure system can reset
-    2\. register default value test: ensure registers' default value is correct after reset.
-    3\. register aliasing test: ensure R/W to one register doesn't affect other registers.
-    4\. slave bus busy and capture test: ensure bus state bits works correctly before and after freed.
-    5\. slave bus ID set up test: ensure invalid bus ID failed, valid bus ID success.
-    6\. illegal command transition test: ensure FSM state transfer correctly if command transite illegally.
-    7\. arbitration lost test: ensure DUT can detect slave arbitration lost.
-    8\. no acknowledge test: ensure DUT can detect slave doesn't acknowledge.
+3.4. direct test case
+    3.4.1. register reset test: ensure system can reset
+    3.4.2. register default value test: ensure registers' default value is correct after reset.
+    3.4.3. register aliasing test: ensure R/W to one register doesn't affect other registers.
+    3.4.4. slave bus busy and capture test: ensure bus state bits works correctly before and after freed.
+    3.4.5. slave bus ID set up test: ensure invalid bus ID failed, valid bus ID success.
+    3.4.6. illegal command transition test: ensure FSM state transfer correctly if command transite illegally.
+    3.4.7. arbitration lost test: ensure DUT can detect slave arbitration lost.
+    3.4.8. no acknowledge test: ensure DUT can detect slave doesn't acknowledge.
