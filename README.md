@@ -14,20 +14,22 @@ First, I created a test plan with four type of verification methods: testing, fu
 
 # 0. **Directory structure**
 
-docs/
-<br>&emsp;\\-- testplan.xml
-<br><br>project_benches/
-<br>&emsp;|-- proj_1/
-<br>&emsp;|-- proj_2/
-<br>&emsp;|-- proj_3/
-<br>&emsp;\\-- proj_4/
-<br><br>verification_ip/
-<br>&emsp;|-- ncsu_pkg/
-<br>&emsp;|-- interface_packages/
-<br>&emsp;&emsp;|-- i2c_pkg/
-<br>&emsp;&emsp;\\-- wb_pkg/
-<br>&emsp;\\-- environment_packages/
-<br>&emsp;&emsp;\\-- i2cmb_env_pkg/
+```
++ docs/
+|   \--- testplan.xml
++ project_benches/
+|   |--- proj_1/
+|   |--- proj_2/
+|   |--- proj_3/
+|   \--- proj_4/
++ verification_ip/
+|   |--- ncsu_pkg/
+|   +--- interface_packages/
+|   |   |--- i2c_pkg/
+|   |   \--- wb_pkg/
+|   +--- environment_packages/
+|      \--- i2cmb_env_pkg/
+```
 
 each proj_n directories contains three folders: rtl, sim, testbench.
 - rtl folder contains DUT's VHDL files.
