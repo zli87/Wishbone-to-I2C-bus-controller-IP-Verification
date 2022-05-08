@@ -28,7 +28,7 @@ First, I created a test plan with four type of verification methods: testing, fu
 |   |   |--- i2c_pkg/
 |   |   \--- wb_pkg/
 |   +--- environment_packages/
-|       \--- i2cmb_env_pkg/
+|   |   \--- i2cmb_env_pkg/
 ```
 
 each proj_n directories contains three folders: rtl, sim, testbench.
