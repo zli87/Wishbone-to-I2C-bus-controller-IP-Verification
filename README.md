@@ -31,7 +31,7 @@ First, I created a test plan with four type of verification methods: testing, fu
 |   |   \--- i2cmb_env_pkg/
 ```
 
-each proj_n directories contains three folders: rtl, sim, testbench.
+Each proj_n directories contains three folders: rtl, sim, testbench.
 - rtl folder contains DUT's VHDL files.
 - sim folder contains Makefile, scripts, output ucdb files.
 - testbench folder contains top.sv
