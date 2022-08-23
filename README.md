@@ -1,5 +1,5 @@
 # ASIC-Verification
-ASIC Verification at 2022 Spring, NCSU. This course only use SystemVerilog, did not use UVM.
+ASIC Verification at 2022 Spring. This course only use SystemVerilog, did not use UVM.
 
 # Abstraction
 The purpose of this project is functional verificaiton of a Whishbone-to-I2C-Controller IP with SystemVerilog. 
